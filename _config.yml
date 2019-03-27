@@ -2,7 +2,6 @@
 # Basic settings.
 #
 # url: http://localhost:4000
-# baseurl: ""
 url: http://Jenny92se.github.io
 baseurl: ""
 title: Jenny

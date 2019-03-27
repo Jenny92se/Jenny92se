@@ -6,7 +6,22 @@ pagination:
     category: Front-end
     per_page: 2
 ---
-
+<hr id="first-hr" class="with-no-margin"/>
+{% for post in site.categories.Front-end %}
+<div class="article-wrapper">
+    <article>
+        {% include article-header.html page=post link=true share=false eye_catch=false %}
+    </article>
+</div>
+<hr class="with-no-margin"/>
+<!--
+<div class="article-wrapper">
+ <a href="{{ post.url }}">{{ post.title }}</a>
+ <span>{{ post.date | date_to_string }}</span> &nbsp;
+</div>
+-->
+{% endfor %}
+<!--
 {% for post in paginator.posts %}
     <div class="post-list">
         <h2><a href="{{ post.url }}" class="link-post_list">{{ post.title }}</a></h2>
@@ -17,7 +32,7 @@ pagination:
         </div>
     </div>
 {% endfor %}
-
+-->
 {% if paginator.total_pages > 1 %}
     <div class="pagination">
         {% if paginator.previous_page %}
